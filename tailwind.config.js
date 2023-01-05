@@ -8,6 +8,11 @@ module.exports = {
       fontFamily: {
         sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       },
+      // Adding brand colors to the theme:
+      colors: {
+        "brand-dark-charcoal-1": "#323330",
+        "brand-yellow-js": "#F0DB4F",
+      },
     },
   },
   plugins: [],
