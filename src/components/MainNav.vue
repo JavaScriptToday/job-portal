@@ -6,9 +6,10 @@
       >
         <a
           href="https://blog.javascripttoday.com/"
-          class="itemc-center flex h-full text-xl"
-          >JavaScript Today - Careers</a
+          class="itemc-center flex h-full items-center text-xl"
+          >{{ company }}</a
         >
+        <h2 class="ml-8 flex h-full items-center">Developed By {{ author }}</h2>
       </div>
     </div>
   </header>
@@ -17,5 +18,11 @@
 <script>
 export default {
   name: "MainNav",
+  data() {
+    return {
+      company: "JavaScript Today - Careers", // Hey Matt, shall we name it like that? -Goktug
+      author: "Goktug Erol - ge@javascripttoday.com",
+    };
+  },
 };
 </script>
