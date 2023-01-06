@@ -9,7 +9,6 @@
           class="itemc-center flex h-full items-center text-xl"
           >{{ company }}</a
         >
-        <h2 class="ml-8 flex h-full items-center">Developed By {{ author }}</h2>
       </div>
     </div>
   </header>
@@ -21,7 +20,6 @@ export default {
   data() {
     return {
       company: "JavaScript Today - Careers", // Hey Matt, shall we name it like that? -Goktug
-      author: "Goktug Erol - ge@javascripttoday.com",
     };
   },
 };
