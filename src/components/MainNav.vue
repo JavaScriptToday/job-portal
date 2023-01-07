@@ -5,33 +5,20 @@
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-dark-charcoal-1 px-8"
       >
         <!-- // === Test Rules applied, if the name changes, you must modify the test - Goktug === -->
-        <a
-          v-bind:href="url"
-          class="itemc-center flex h-full items-center text-xl"
-          >{{ company }}</a
-        >
+        <a :href="url" class="itemc-center flex h-full items-center text-xl">{{
+          company
+        }}</a>
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
-            <li class="h-full">
-              <a href="" class="flex h-full items-center py-2.5">Teams</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="" class="flex h-full items-center py-2.5">Location</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="" class="flex h-full items-center py-2.5"
-                >Life at JavaScript Today</a
-              >
-            </li>
-            <li class="ml-9 h-full">
-              <a href="" class="flex h-full items-center py-2.5">How we Hire</a>
-            </li>
-            <li class="ml-9 h-full">
-              <a href="" class="flex h-full items-center py-2.5">Students</a>
-            </li>
-
-            <li class="ml-9 h-full">
-              <a href="" class="flex h-full items-center py-2.5">Jobs</a>
+            <!-- using v for loop directive to make the code cleaner -->
+            <li
+              v-for="menuItem in menuItems"
+              :key="menuItem"
+              class="ml-9 h-full first:ml-0"
+            >
+              <a href="" class="flex h-full items-center py-2.5">{{
+                menuItem
+              }}</a>
             </li>
           </ul>
         </nav>
@@ -47,6 +34,14 @@ export default {
     return {
       company: "JavaScript Today - Careers", // Test rules appplied. If you change the name, you must modify the test. - Goktug
       url: "https://careers.javascripttoday.com",
+      menuItems: [
+        "Teams",
+        "Locations",
+        "Life at JavaScript Today",
+        "How we Hire",
+        "Students",
+        "Jobs",
+      ],
     };
   },
 };
