@@ -4,6 +4,7 @@
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-dark-charcoal-1 px-8"
       >
+        <!-- // === Test Rules applied, if the name changes, you must modify the test - Goktug === -->
         <a
           href="https://blog.javascripttoday.com/"
           class="itemc-center flex h-full items-center text-xl"
@@ -19,7 +20,7 @@ export default {
   name: "MainNav",
   data() {
     return {
-      company: "JavaScript Today - Careers", // Hey Matt, shall we name it like that? -Goktug
+      company: "JavaScript Today - Careers", // Test rules appplied. If you change the name, you must modify the test. - Goktug
     };
   },
 };
