@@ -23,14 +23,23 @@
             </li>
           </ul>
         </nav>
+        <!-- Login Item for the NavBar-->
+        <div class="ml-auto flex h-full items-center">
+          <action-button />
+        </div>
       </div>
     </div>
   </header>
 </template>
 
 <script>
+import ActionButton from "@/components/ActionButton.vue";
+
 export default {
   name: "MainNav",
+  components: {
+    ActionButton,
+  },
   data() {
     return {
       company: "JavaScript Today - Careers", // Test rules appplied.

@@ -13,6 +13,9 @@ module.exports = {
         "brand-dark-charcoal-1": "#323330",
         "brand-yellow-js": "#F0DB4F",
       },
+      boxShadow: {
+        yellow: "0 0 3px 3px #ffff33 ",
+      },
     },
   },
   plugins: [],
