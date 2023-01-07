@@ -4,13 +4,14 @@
       <div
         class="mx-auto flex h-full flex-nowrap border-b border-solid border-brand-dark-charcoal-1 px-8"
       >
-        <!-- // === Test Rules applied, if the name changes, you must modify the test - Goktug === -->
+        <!-- Test Rules applied -->
         <a :href="url" class="itemc-center flex h-full items-center text-xl">{{
           company
         }}</a>
         <nav class="ml-12 h-full">
           <ul class="flex h-full list-none">
             <!-- using v for loop directive to make the code cleaner -->
+            <!-- Test rules applied -->
             <li
               v-for="menuItem in menuItems"
               :key="menuItem"
@@ -32,7 +33,7 @@ export default {
   name: "MainNav",
   data() {
     return {
-      company: "JavaScript Today - Careers", // Test rules appplied. If you change the name, you must modify the test. - Goktug
+      company: "JavaScript Today - Careers", // Test rules appplied.
       url: "https://careers.javascripttoday.com",
       menuItems: [
         "Teams",
