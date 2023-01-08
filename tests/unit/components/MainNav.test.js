@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/vue";
+import userEvent from "@testing-library/user-event";
 
 import MainNav from "@/components/MainNav.vue";
 
@@ -25,5 +26,26 @@ describe("MainNav", () => {
       "Students",
       "Jobs",
     ]);
+  });
+  describe("when the user logs in", () => {
+    it("displays user profile picture", async () => {
+      render(MainNav);
+
+      let profileImage = screen.queryByRole("img", {
+        name: /user profile image/i, // i means case insensitive
+      });
+      expect(profileImage).not.toBeInTheDocument();
+
+      const loginButton = screen.getByRole("button", {
+        name: /Sign in/i,
+      });
+      // Click button is async / it returns promise
+      await userEvent.click(loginButton);
+      // Modify getByRole when backend added for automatic image change!
+      profileImage = screen.getByRole("img", {
+        name: /user profile image/i,
+      });
+      expect(profileImage).toBeInTheDocument();
+    });
   });
 });
