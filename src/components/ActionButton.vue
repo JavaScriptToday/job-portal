@@ -3,12 +3,13 @@
   <button
     class="rounded border-0 bg-brand-dark-charcoal-1 px-5 py-3 font-medium text-white hover:shadow-yellow"
   >
-    Sign In
+    {{ text }}
   </button>
 </template>
 
 <script>
 export default {
   name: "ActionButton",
+  props: ["text"], // adding a prop to use the same button for different purposes
 };
 </script>
