@@ -1,4 +1,3 @@
-// Dummy Sign-In Button it can be used if any backend and authentication added
 <template>
   <button :class="buttonClass">
     {{ text }}
@@ -8,15 +7,25 @@
 <script>
 export default {
   name: "ActionButton",
-  props: ["text"], // adding a prop to use the same button for different purposes
-  data() {
-    return {
-      primaryBool: true,
-    };
+  props: {
+    text: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required: false,
+      default: "primary", //fallback
+      validator(value) {
+        return ["primary", "secondary"].includes(value);
+      },
+    },
   },
   computed: {
     buttonClass() {
-      return { primary: this.primaryBool };
+      return {
+        [this.type]: true,
+      };
     },
   },
 };
@@ -27,9 +36,10 @@ button {
 }
 
 .primary {
-  @apply border-0 bg-brand-dark-charcoal-1 text-white hover:shadow-yellow;
+  @apply border-0 bg-brand-dark-charcoal-1 text-white hover:shadow-lilac;
 }
 
-/* .secondary {
-} */
+.secondary {
+  @apply bg-transparent text-brand-dark-charcoal-1 hover:bg-brand-dark-charcoal-2 hover:text-white;
+}
 </style>
