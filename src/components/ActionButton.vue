@@ -1,6 +1,6 @@
 // Dummy Sign-In Button it can be used if any backend and authentication added
 <template>
-  <button :class="{ primary: primaryD }">
+  <button :class="buttonClass">
     {{ text }}
   </button>
 </template>
@@ -11,8 +11,13 @@ export default {
   props: ["text"], // adding a prop to use the same button for different purposes
   data() {
     return {
-      primaryD: true,
+      primaryBool: true,
     };
+  },
+  computed: {
+    buttonClass() {
+      return { primary: this.primaryBool };
+    },
   },
 };
 </script>
