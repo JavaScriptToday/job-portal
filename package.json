@@ -1,6 +1,7 @@
 {
   "name": "javascript_today_jobportal",
   "version": "0.0.0",
+  "author": "Goktug Erol - ge@legacycode.dev & Mexico - January 2023",
   "private": true,
   "scripts": {
     "dev": "vite",
@@ -10,6 +11,9 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.2.1",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
+    "@fortawesome/vue-fontawesome": "^3.0.2",
     "vue": "^3.2.45"
   },
   "devDependencies": {

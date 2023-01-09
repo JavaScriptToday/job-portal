@@ -23,6 +23,7 @@
             </li>
           </ul>
         </nav>
+
         <!-- Login Item for the NavBar-->
         <div class="ml-auto flex h-full items-center">
           <profile-image v-if="isLoggedIn" />
@@ -34,19 +35,23 @@
           />
         </div>
       </div>
+
+      <the-subnav v-if="isLoggedIn" />
     </div>
   </header>
 </template>
 
 <script>
 import ActionButton from "@/components/ActionButton.vue";
-import ProfileImage from "@//components/ProfileImage.vue";
+import ProfileImage from "@/components/ProfileImage.vue";
+import TheSubnav from "@/components/TheSubnav.vue";
 
 export default {
   name: "MainNav",
   components: {
     ActionButton,
     ProfileImage,
+    TheSubnav,
   },
   data() {
     return {

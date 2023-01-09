@@ -15,6 +15,7 @@ module.exports = {
         "brand-olive": "79806B",
         "brand-lilac": "#775E80",
         "brand-chocolate": "#323033",
+        "brand-green-1": "#137333",
       },
       boxShadow: {
         lilac: "0 0 3px 3px #775E80 ",
