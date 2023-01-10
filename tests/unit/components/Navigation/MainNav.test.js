@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/vue";
 import userEvent from "@testing-library/user-event";
 
-import MainNav from "@/components/MainNav.vue";
+import MainNav from "@/components/Navigation/MainNav.vue";
 
 // Testing if company name is in the document
 // If  the company property (JavaScript Today - Careers) changes you must edit this otherwise won't pass the test.

@@ -32,14 +32,18 @@ export default {
 </script>
 <style scoped>
 button {
-  @apply rounded px-5 py-3 font-medium;
+  @apply px-5 py-3 font-medium;
 }
 
 .primary {
-  @apply border-0 bg-brand-dark-charcoal-1 text-white hover:shadow-lilac;
+  @apply rounded  bg-brand-dark-charcoal-1 text-white hover:shadow-red;
 }
 
 .secondary {
   @apply bg-transparent text-brand-dark-charcoal-1 hover:bg-brand-dark-charcoal-2 hover:text-white;
+}
+
+.tertiary {
+  @apply rounded-r-3xl bg-transparent text-brand-dark-charcoal-1 hover:bg-brand-green-1 hover:text-white;
 }
 </style>
